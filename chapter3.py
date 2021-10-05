@@ -55,3 +55,27 @@ print(f'hey {guests[1]} you are still invited')
 del guests[1]
 del guests[0]
 print(guests)
+
+# think of at least 5 places in the world youd like to visit, store the locations in a list, make sure its not in alphabetical oreder
+
+places = ['paris', 'italy', 'amsterdam', 'sweden', 'barcelona']
+print(places)
+
+# use sorted() to print your list in alphabetical order w/out actually modifying the list
+
+print(sorted(places))
+print(places)
+
+# use sorted to print your list in reverse alphabetical order
+print(sorted(places, reverse=True))
+print(places)
+
+# use reverse() to change the order of your list. Print the list to show the order has been changed, then use reverse() again to change back to its original order
+places.reverse()
+print(places)
+places.reverse()
+print(places)
+
+# use sort() to store the list in alphabetical order
+places.sort()
+print(places)
