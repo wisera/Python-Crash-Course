@@ -90,7 +90,91 @@ print("My friend's favorite pizzas are:")
 for pizza in friend_pizzas:
     print(pizza)
 
+# create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'
+# write an if statement to test whether the alien's color is green. If it is, print a message the player just earned 5 points
+# write one versiion of this p[rogram that passes the if test and another that fails
+ 
+alien_color = 'green'
 
+if alien_color == 'green':
+    print('You just earned 5 points')
+
+if alien_color == 'red':
+    print('Hes red')
+
+# choose a color for an alien as you did and write an if-else chain
+# if the alien's color is green, print a statement that the player just earned 5 points for shooting the alien
+# if the alien's color isnt green, print a staetement that the player just earned 10 points
+# write one version of this program that runs the if block and another that runs the else block
+
+alien_color = 'green'
+
+if alien_color == 'green':
+    print('You just earned 5 points')
+else:
+    print('you earned 10 points')
+
+alien_color = 'red'
+
+if alien_color == 'green':
+    print('You just earned 5 points')
+else:
+    print('you earned 10 points')
+
+# turn your if-else chain into an if-elif-else chain
+# if the alien is green print a message that the player earned 5 points
+# if the alein is yellow, print a message that the player earned 10 points
+# if the alien is red, print a message that the player earned 15 points
+# write 3 versions, making sure each message is printed for the appropriate color
+alien_color = 'green'
+
+if alien_color == 'green':
+   print('You just earned 5 points')
+elif alien_color == 'yellow':
+    print('you earned 10 points')
+elif alien_color == 'red':
+    print('you earned 15 points')
+
+alien_color = 'red'
+
+if alien_color == 'green':
+   print('You just earned 5 points')
+elif alien_color == 'yellow':
+    print('you earned 10 points')
+elif alien_color == 'red':
+    print('you earned 15 points')
+
+alien_color = 'yellow'
+
+if alien_color == 'green':
+   print('You just earned 5 points')
+elif alien_color == 'yellow':
+    print('you earned 10 points')
+elif alien_color == 'red':
+    print('you earned 15 points')
+
+# write an if-elif-else chain that determines a persons stage of life. Set a value for the variable age, and then:
+# if the person is less than 2 years old, print a message that the person is a baby
+# if the person is a least 2 years old but less than 4, print a message that person is a toddler
+# if the persons is at leat 4 years old but less than 13, print a message that the person is a kid
+# if the person is at least 13 but less than 20, print a message that the p[erson is a teen
+# # if the person is at least 20 but less than 65, print that the person is an adult
+# if the person is age 65 or older, print elder
+
+age = 23
+
+if age < 2:
+    print('baby')
+elif age >=2 and age < 4:
+    print('toddler')
+elif age >=4 and age < 13:
+    print('kid')
+elif age >=13 and age < 20:
+    print('teen')
+elif age >=20 and age < 65:
+    print('adult')
+elif age >=65:
+    print('elder')
 
 
 
