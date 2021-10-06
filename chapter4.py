@@ -176,5 +176,21 @@ elif age >=20 and age < 65:
 elif age >=65:
     print('elder')
 
+# make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list
+# make a list of your 3 favorite fruits and call it favorite_fruits
+# write 5 if statements. Each should check whether a certain kind of frui is in your list.
+# if the fruit is in your list, the if block should print a statement, such as You really like banana!
 
+favorite_fruits = ['apple', 'banana', 'orange']
+
+if 'banana' in favorite_fruits:
+    print('You like bananas!')
+if 'strawberry' in favorite_fruits:
+    print('you like strawberry!')
+if 'orange' in favorite_fruits:
+    print('you like orange!')
+if 'blackberry' in favorite_fruits:
+    print('you like blackberry!')
+if 'apple' in favorite_fruits:
+    print('you like apple!')
 
