@@ -194,3 +194,49 @@ if 'blackberry' in favorite_fruits:
 if 'apple' in favorite_fruits:
     print('you like apple!')
 
+# make a list of 5 or more usernames, incluiding the mane 'admin'. Imagine you are writing code that will print a greeting to each user after they log in.
+# Loop through the list, adn print a greeting to each user:
+# if the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+# otherwise, print a genereic greeting such as Hello Jadem thank you for loggin in
+
+usernames = ['luan', 'wise', 'admin', 'solrac', 'anon']
+
+for user in usernames:
+    if user == 'admin':
+        print(f'Welcome {user}, would you like to see a status report?')
+    else:
+        print(f'Hello {user}, thank you for loggin in')
+
+# add an if test to last assigntment to make sure the list of users is not empty
+# if the list is empty, print the message We need to find some users!
+# remove all of the usernames from your list, and make sure the correct message is printed
+
+usernames = []
+
+if usernames:
+    for user in usernames:
+        if user == 'admin':
+            print(f'Welcome {user}, would you like to see a status report?')
+        else:
+            print(f'Hello {user}, thank you for loggin in')
+else:
+    print('We need to find some users!')
+
+# do the following to create a program that simulates how websites ensure that everyone has a unique username
+# make a list of five or more usernames called current_users
+# make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list
+# loop through the new_users list to see if each new username has already been used. 
+# If it has, print a message that the person will need to enter a new username. 
+# If a username has not been used, print a message saying that the username is available
+# Make sure your comparison is case sensitive. If 'john' has been used, 'JOHN' should not be accepted.
+# to do this you will need to make a copy of current_users containtn the lowercase versions of all existing users.
+
+current_users = ['luan', 'daniel', 'carlos', 'leo', 'ph']
+new_users = ['joao', 'gui', 'arrom', 'luan', 'juba']
+
+for user in new_users:
+    if user in current_users:
+        print(f'sorry {user} you need to create a new username')
+    else:
+        print(f'the name {user} is available')
+    
