@@ -46,3 +46,30 @@ for river in rivers:
     print(river)
 for country in rivers.values():
     print(country)
+
+# make a list of people who should take the favorite languages poll. 
+# Include some names that are already in the favorite_languages dictionary nad some that are not
+# loop through the list of people who should take the poll. 
+# If they have already taken the poll, print a message thanking them for responding
+# If they have not take the poll, print a message inviting them to take the poll
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python'
+}
+
+people_for_poll = [
+    'luan',
+    'carlos',
+    'phil',
+    'edmundo',
+    'edward'
+]
+
+for person in people_for_poll:
+    if person in favorite_languages:
+        print(f'hey {person}!\nThanks for taking the poll!')
+    else:
+        print(f'Hey {person}!\n You should take the damn poll!')
