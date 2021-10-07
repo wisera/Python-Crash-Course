@@ -73,3 +73,62 @@ for person in people_for_poll:
         print(f'hey {person}!\nThanks for taking the poll!')
     else:
         print(f'Hey {person}!\n You should take the damn poll!')
+
+# use the dictionary person created before. 
+# Make 2 new dictionaries representing different people, adns tore all 3 dicitonaries in a list called people
+# Loop through your list of people. As you loop through the list, print everything you know about each person.
+
+person_0 = {
+    'first_name':'Luan',
+    'last_name':'Moreira',
+    'age':'24',
+    'city':'San Diego'
+}
+
+person_1 = {
+    'first_name':'Carlos',
+    'last_name':'Menezes',
+    'age':'23',
+    'city':'Nikity City'
+}
+
+person_2 = {
+    'first_name':'Daniel',
+    'last_name':'Bressan',
+    'age':'22',
+    'city':'Vargem Grande Paulista'
+}
+
+people = [person_0, person_1, person_2]
+
+for person in people:
+    print(f"My name is {person['first_name']} {person['last_name']}"
+            f"\nI'm {person['age']} years old"
+            f"\nand I'm from {person['city']}"
+    )
+
+# make several dictionaries, where each dictionary represents a different pet.
+# in each dicitonary, include the kind of animal and the owner's name.
+# store these dictionaries in a list called pets.
+# next loop through your list and as you do, print everything you know about each pet
+
+pet_0 = {
+    'kind':'dog',
+    'name':'doco',
+    'owner_name':'carol'
+}
+
+pet_1 = {
+    'kind':'cat',
+    'name':'toguro',
+    'owner_name':'luan'
+
+}
+
+pets = [pet_0, pet_1]
+
+for pet in pets:
+    print(f"This little guy's name is {pet['name'].title()}, obviously he is a {pet['kind'].lower()}"
+            f"\nhis owner is called {pet['owner_name'].title()}")
+
+
