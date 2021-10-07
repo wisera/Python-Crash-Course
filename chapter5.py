@@ -27,3 +27,22 @@ for key in favorites:
     print(key)
 for value in favorites:
     print(favorites[value])
+
+ # make a dictionary containing three mahor rivers and the country each river runs through. One key-value paru might be 'nile : 'egypt'
+ # use a loop to rpint ther name of each river included in the dictionary
+ # use a loop to print the name of each country included in the dictionary
+
+rivers = {
+     'nile':'egypt',
+     'amazon':'brazil',
+     'canyon':'usa'
+     }
+
+for river in rivers:
+    country = rivers[river]
+    print(f'The {river} river runs through the country of {country}')
+
+for river in rivers:
+    print(river)
+for country in rivers.values():
+    print(country)
