@@ -231,12 +231,32 @@ else:
 # Make sure your comparison is case sensitive. If 'john' has been used, 'JOHN' should not be accepted.
 # to do this you will need to make a copy of current_users containtn the lowercase versions of all existing users.
 
-current_users = ['luan', 'daniel', 'carlos', 'leo', 'ph']
+current_users = ['Luan', 'daniel', 'carlos', 'leo', 'ph']
+current_users_copy = [user.lower() for user in current_users]
 new_users = ['joao', 'gui', 'arrom', 'luan', 'juba']
 
+print(current_users)
+
 for user in new_users:
-    if user in current_users:
+    if user in current_users_copy:
         print(f'sorry {user} you need to create a new username')
     else:
         print(f'the name {user} is available')
     
+# ordinal numbers indicate their position in a list, such as 1st or 2nd. Most ordinal numbers end in  th, except 1,2, and 3.
+# store the numbers 1 through 9 in a list
+# use and if-elif-else chain inside the loop to print the proper ordinal ending for each number. Your output should read "1st 2nd 3rd 4th 5th... so on"
+# and each result should be on a separate line
+
+list = list(range(1,10))
+print(list)
+
+for number in list:
+    if number == 1:
+        print(f'{number}st')
+    elif number == 2:
+        print(f'{number}nd')
+    elif number == 3:
+        print(f'{number}rd')
+    else:
+        print(f'{number}th')
