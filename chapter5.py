@@ -131,4 +131,60 @@ for pet in pets:
     print(f"This little guy's name is {pet['name'].title()}, obviously he is a {pet['kind'].lower()}"
             f"\nhis owner is called {pet['owner_name'].title()}")
 
+# make a dictionary called favorite_places. 
+# Think of 3 names to use as keys in the dicitironary , and store one to three favorite pklaces for eadh person.
+# Loop through the dicitonary and print each person's name and their favorite places
 
+favorite_places = {
+    'luan':'san diego',
+    'marcos':'el salvador',
+    'carol':'italy'
+}
+
+for key in favorite_places:
+    value = favorite_places[key]
+    print(f"{key.title()}'s place is {value.title()}")
+
+# modify the second exedrice so each person can have more than one favorite number. 
+# Then print each person's name along with their favoreite numbers
+
+favorites = {
+    'luan':[22,2],
+    'carlos':[24,8],
+    'daniel':[10,30],
+    'leo':[13,10],
+    'carol':[29,88]
+}
+
+for name,number in favorites.items():
+    print(f"{name.title()}'s favorite numbers are {number[0]} and {number[1]}")
+
+# make a dictionary called cities. Use the names of three cities as keys in your dicitionary. 
+# Create a dicitonary of information about each city and include the county that the city is in, population, and fact
+# print the name of each city and all of rhe info you have about it
+
+cities = {
+    'san diego': {
+        'country': 'usa',
+        'population': 10,
+        'fact':'luan was born here'
+    },
+
+    'nikity': {
+        'country': 'brazil',
+        'population':11,
+        'fact':'luan lived here'
+        },
+    
+    'sampa': {
+        'country': 'brazil',
+        'population': 12,
+        'fact':'luan visited here'
+    }
+}
+
+for city, city_items in cities.items():
+    print(f"The city of {city.title()} is located in the country of {city_items['country'].title()}, "
+        f"\nits population is of {city_items['population']} people, "
+        f"\na fact about it is that {city_items['fact']}"
+    )
