@@ -1,125 +1,190 @@
-# wirte a program that asks the user what kind od rental car they would like. 
-# Print a message about that cat, such as "Let me see if I can find you a Subaru"
+# use a dictionary to store info about a person you know. Store their first name, last name, age, and the city they live in
+# You should have keys such as first_name, last_name, age, and city. Print each piece of info stored in the dictionary
 
-car_type = input('what kind of car do you want?')
+person = {
+    'first_name':'Luan',
+    'last_name':'Moreira',
+    'age':'23',
+    'city':'San Diego'
+}
 
-print(f'Let me check if we have a {car_type}')
+for value in person:
+    print(person[value])
 
-# ask the user how many people are in their dinner group
-# if the answer is more than 8, porint a message saying that they will gave to wait for a table
-# otherwise report that the table is ready
+# use a dictionary to store peoples favorite numbers. Think of five names, and use them as keys in your dictionary.
+# Think og a favorite number for each person, and store each as a value in your dicitonary.
+# Print each persons name and their favorite number.
 
-number_of_people = int(input('How many people are in your dinner group?'))
+favorites = {
+    'luan':22,
+    'carlos':24,
+    'daniel':10,
+    'leo':13,
+    'carol':29
+}
 
-if number_of_people > 8 :
-    print('Sorry you will have to wait')
-else:
-    print('Right this way sir')
+for key in favorites:
+    print(key)
+for value in favorites:
+    print(favorites[value])
 
-# ask the user for a number, and then report if the number is a ultiple of 10 or not
+ # make a dictionary containing three mahor rivers and the country each river runs through. One key-value paru might be 'nile : 'egypt'
+ # use a loop to rpint ther name of each river included in the dictionary
+ # use a loop to print the name of each country included in the dictionary
 
-number = int(input('Gimme a number and Ill let you know if its a multiple of 10 '))
+rivers = {
+     'nile':'egypt',
+     'amazon':'brazil',
+     'canyon':'usa'
+     }
 
-if number % 10 == 0:
-    print(f'{number} is a multiple of 10')
-else:
-    print(f'{number} is not a multiple of 10')
+for river in rivers:
+    country = rivers[river]
+    print(f'The {river} river runs through the country of {country}')
 
-# write a loop that prompts the user to enter a series of pizza toppings until they enter a 'quit' value.
-# as they enter each topping, print a message saying you will add that topping to their pizza
+for river in rivers:
+    print(river)
+for country in rivers.values():
+    print(country)
 
-while True:
-    topping = input("enter your favorite pizza toppings \n (enter 'quit' to stop)")
-    if topping == 'quit':
-        break
+# make a list of people who should take the favorite languages poll. 
+# Include some names that are already in the favorite_languages dictionary nad some that are not
+# loop through the list of people who should take the poll. 
+# If they have already taken the poll, print a message thanking them for responding
+# If they have not take the poll, print a message inviting them to take the poll
 
-# or
+favorite_languages = {
+    'jen': 'python',
+    'sarah':'c',
+    'edward':'ruby',
+    'phil':'python'
+}
 
-active = True
+people_for_poll = [
+    'luan',
+    'carlos',
+    'phil',
+    'edmundo',
+    'edward'
+]
 
-while active:
-    topping = input("enter your favorite pizza toppings \n (enter 'quit' to stop)")
-    if topping == 'quit':
-        active = False
+for person in people_for_poll:
+    if person in favorite_languages:
+        print(f'hey {person}!\nThanks for taking the poll!')
+    else:
+        print(f'Hey {person}!\n You should take the damn poll!')
 
+# use the dictionary person created before. 
+# Make 2 new dictionaries representing different people, adns tore all 3 dicitonaries in a list called people
+# Loop through your list of people. As you loop through the list, print everything you know about each person.
 
-# a movie theater charges different ticket prices depending on a person's age. 
-# If a person is under the age 0f 3, the ticket is free
-#  if they are between 3 and 12, the ticket is $10
-# if they are over age 12, the ticket is $15
-# write a loop in which you ask users their age, and then tell them the cost of their movie ticket
+person_0 = {
+    'first_name':'Luan',
+    'last_name':'Moreira',
+    'age':'24',
+    'city':'San Diego'
+}
 
-age = int(input('How old are you? '))
+person_1 = {
+    'first_name':'Carlos',
+    'last_name':'Menezes',
+    'age':'23',
+    'city':'Nikity City'
+}
 
-if age < 3:
-    print('Your ticket is free')
-elif age <= 3 or age < 12:
-    print('Your ticket is $10')
-else:
-    print('Your ticket is $15')
+person_2 = {
+    'first_name':'Daniel',
+    'last_name':'Bressan',
+    'age':'22',
+    'city':'Vargem Grande Paulista'
+}
 
-# make a lit called sandwich_orders and fill it with the names of various sandwiches
-# Then make an empty list called finished_sandwiches.
-# Loop through the list of sandwich oreders and print a message for each order, such as I mde your tuna sandwich
-# as each sandwich is amde, move it to the list of finished sandwiches.
-# After all the sandwiches have been made, print a message listing each sandwich that was made
+people = [person_0, person_1, person_2]
 
-sandwich_orders = ['tuna', 'blt', 'parma', 'cheese', 'salami']
+for person in people:
+    print(f"My name is {person['first_name']} {person['last_name']}"
+            f"\nI'm {person['age']} years old"
+            f"\nand I'm from {person['city']}"
+    )
 
-finished_sandwiches = []
+# make several dictionaries, where each dictionary represents a different pet.
+# in each dicitonary, include the kind of animal and the owner's name.
+# store these dictionaries in a list called pets.
+# next loop through your list and as you do, print everything you know about each pet
 
-while sandwich_orders:
-    sandwich = sandwich_orders.pop()
-    print(f'I made your {sandwich} sandwich')
-    finished_sandwiches.append(sandwich)
+pet_0 = {
+    'kind':'dog',
+    'name':'doco',
+    'owner_name':'carol'
+}
 
-print(f'The following sandwiches have been made: ')
+pet_1 = {
+    'kind':'cat',
+    'name':'toguro',
+    'owner_name':'luan'
 
-for sandwich in finished_sandwiches:
-    print(f'{sandwich}')
+}
 
-# using the list sandwich_orders from last exercise, make sure the sandwich 'parma' appears in the list at leat 3 times
-# add code near the beggining of your program to print a message saying the deli has run out of parma,
-# and then use a while loop to remove all occurences of 'parma' from sandwich_orders
-# make sure no parma sandwiches end up in finished_sandwiches
+pets = [pet_0, pet_1]
 
-sandwich_orders = ['tuna', 'parma', 'blt', 'parma', 'cheese', 'parma', 'salami']
+for pet in pets:
+    print(f"This little guy's name is {pet['name'].title()}, obviously he is a {pet['kind'].lower()}"
+            f"\nhis owner is called {pet['owner_name'].title()}")
 
-finished_sandwiches = []
+# make a dictionary called favorite_places. 
+# Think of 3 names to use as keys in the dicitironary , and store one to three favorite pklaces for eadh person.
+# Loop through the dicitonary and print each person's name and their favorite places
 
-print('sorry we ran out of parma')
+favorite_places = {
+    'luan':'san diego',
+    'marcos':'el salvador',
+    'carol':'italy'
+}
 
-while 'parma' in sandwich_orders:
-    sandwich_orders.remove('parma')
+for key in favorite_places:
+    value = favorite_places[key]
+    print(f"{key.title()}'s place is {value.title()}")
 
-while sandwich_orders:
-    sandwich = sandwich_orders.pop()
-    print(f'I made your {sandwich} sandwich')
-    finished_sandwiches.append(sandwich)
+# modify the second exedrice so each person can have more than one favorite number. 
+# Then print each person's name along with their favoreite numbers
 
-print(f'The following sandwiches have been made: ')
+favorites = {
+    'luan':[22,2],
+    'carlos':[24,8],
+    'daniel':[10,30],
+    'leo':[13,10],
+    'carol':[29,88]
+}
 
-for sandwich in finished_sandwiches:
-    print(f'{sandwich}')
+for name,number in favorites.items():
+    print(f"{name.title()}'s favorite numbers are {number[0]} and {number[1]}")
 
-# write a program that polls users about their dream vacation.
-# write a prompt similar to if you could visit one place in the world, where would you go?
-# include a vlock of code that prints the results to the poll
+# make a dictionary called cities. Use the names of three cities as keys in your dicitionary. 
+# Create a dicitonary of information about each city and include the county that the city is in, population, and fact
+# print the name of each city and all of rhe info you have about it
 
-dream_vacation = {}
+cities = {
+    'san diego': {
+        'country': 'usa',
+        'population': 10,
+        'fact':'luan was born here'
+    },
 
-poll_active = True
+    'nikity': {
+        'country': 'brazil',
+        'population':11,
+        'fact':'luan lived here'
+        },
+    
+    'sampa': {
+        'country': 'brazil',
+        'population': 12,
+        'fact':'luan visited here'
+    }
+}
 
-while poll_active:
-    name = input('Hello, whats your name?')
-    response = input('If you could visit one place in the world, where you you go?')
-    dream_vacation[name] = response
-
-    repeat = input(' would another person like to share? ( write quit to stop )')
-    if repeat == 'quit':
-        poll_active = False
-
-print('The poll results are: ')
-
-for name, response in dream_vacation.items():
-    print(f'{name.title()} would like to go to {response.title()}')
+for city, city_items in cities.items():
+    print(f"The city of {city.title()} is located in the country of {city_items['country'].title()}, "
+        f"\nits population is of {city_items['population']} people, "
+        f"\na fact about it is that {city_items['fact']}"
+    )
