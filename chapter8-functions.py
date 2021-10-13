@@ -29,4 +29,26 @@ def make_shirt(size, message):
 make_shirt(10,'my name is luan')
 make_shirt(message='my name is luan', size='medium')
 
+# modify the make_shirt() funciton so taht shirts are large by default w/ a message that reads I love Python
+# make a large shirt and a medium shirt w/ the default message, and a shirt of any size w/ a different message
 
+def make_shirt(size='large', message='I luv Python'):
+    """print size and message"""
+    print(f'The size of the shirt is {size} and the text on it is {message}')
+
+make_shirt()
+make_shirt(size='medium')
+make_shirt(10, 'my name is luanzin')
+
+# write a function called describe_city() that acepts the name of a city and its country
+# the function should print a simple sentence, such as Reyk is in Iceland.
+# give the parameter for the country a default value
+# call your function for 3 different cities, at leat one of which is not the default
+
+def describe_city(city, country='Brazil'):
+    """print city name and country"""
+    print(f'the city of {city.title()} is located in {country.title()}')
+
+describe_city('niteroi')
+describe_city('san diego','america')
+describe_city(country='italy', city='milano')
