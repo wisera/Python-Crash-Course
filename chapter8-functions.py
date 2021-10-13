@@ -172,3 +172,44 @@ send_messages(messages[:], sent_messages)
 
 print(messages)
 print(sent_messages)
+
+# write a funciton that accepts a list of items a person wants on a sandwich
+# the funciton should have one paramenter that collects as many items as the function call provides
+# and it should print a summary of the sandwich thats being ordered
+# call the function 3 times, using a different number of arguments each time
+
+def order_sandwich(*toppings):
+    print('You ordered the following toppings for your sandwich: ')
+    for topping in toppings:
+        print(f'- {topping}')
+
+order_sandwich('ham','cheese','bacon')
+
+# example of a function taking an arbitrary number of keyword arguments
+
+def build_profile(first,last,**user_info):
+    """Build a dicitonary containing everything we know about a user"""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('luan','moreira',location='nikity', field='tech')
+print(user_profile)
+
+
+# write a function that stores ingo about a cat in a dcitionary
+# the function should always reeibe a manufacturer and a model name.
+# it should then accept an arbitrary number of keyword arguments.
+# call the function w/ the required ingo and 2 other name-value pairs, such as color or an optional feature
+# your function should work for a call like this one:
+# car = make_car('subaru', 'outback', color='blue', tow_package=True)
+# print the dictionary returned to make sure all the ingo was sotered corectly
+
+def make_car(manufacturer, model, **car_info):
+    car_info['manufacturer'] = manufacturer
+    car_info['model'] = model
+    return car_info
+
+car = make_car('chevrolet','prisma', owner = 'laurinda', maluca = True)
+
+print(car)
