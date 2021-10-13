@@ -117,3 +117,58 @@ while True:
 
     album = make_album(artist_name, album_name, number_of_songs)
     print(album)
+
+# make a list containing a series of short text messages. 
+# Pass the list to a function called show_messages(), which prints each text message
+
+messages = ['oi','td bem?','cansei','pqp']
+
+def show_messages(list):
+    print(list)
+
+show_messages(messages)
+
+# start w/ a copy of last exercise. 
+# Write a function called send_messages() that prints each text message 
+# and moves each message to a new list called sent_messages as its printed.
+# after calling the function, print both of your lists to make sure the messages were moved correctly
+
+messages = ['oi','td bem?','cansei','pqp']
+
+def show_messages(list):
+    print(list)
+
+def send_messages(list1, list2):
+    """using list1 and list2 as parameters but I could use messages and sent_messages as parameters"""
+    while messages:
+        current_message = list1.pop()
+        print(current_message)
+        list2.append(current_message)
+
+sent_messages = []
+
+send_messages(messages, sent_messages)
+
+print(messages)
+print(sent_messages)
+
+# start w/ your work from last exercise. Call the function send_messages() w/ a copy of the list messages.
+# After calling the function, print both of your lists to show that the original list has retained its messages.
+
+messages = ['oi','td bem?','cansei','pqp']
+
+def show_messages(list):
+    print(list)
+
+def send_messages(messages, sent_messages):
+    while messages:
+        current_message = messages.pop()
+        print(current_message)
+        sent_messages.append(current_message)
+
+sent_messages = []
+
+send_messages(messages[:], sent_messages)
+
+print(messages)
+print(sent_messages)
