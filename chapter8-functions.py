@@ -87,3 +87,33 @@ album_2 = make_album('caio guerra', 'espelho', 1)
 print(album_0)
 print(album_1)
 print(album_2)
+
+# start w/ your program from last exercice. Write a while loop that allows users to enter an album's artist and title
+# Once you have that info, call make_album() w/ the user's inpput and print the dicitonary thats created
+# be sure to include a quit value in the while loop
+
+def make_album(artist, name, songs=None):
+    album = {
+        'artist name' : artist.title(),
+        'album name' : name.title()
+    }
+    if songs:
+        album['number of songs'] = songs
+    return album
+
+while True:
+    print("Hello, please enter the following information about your favorite music album")
+    print("enter 'q' at any given time to stop")
+
+    artist_name = input("Please enter your artist's name: ")
+    if artist_name == 'q':
+        break
+    album_name = input("Please enter the name of the album: ")
+    if album_name == 'q':
+        break
+    number_of_songs = input("Please enter the number of songs (optional): ")
+    if number_of_songs == 'q':
+        break
+
+    album = make_album(artist_name, album_name, number_of_songs)
+    print(album)
