@@ -52,3 +52,38 @@ def describe_city(city, country='Brazil'):
 describe_city('niteroi')
 describe_city('san diego','america')
 describe_city(country='italy', city='milano')
+
+# write a function called city_country() that takes in the name of a city and its country
+# the fucntion should return a string like "Santiago, Chile"
+
+def city_country(city,country):
+    message = f"{city.title()}, {country.title()}"
+    return message
+
+my_city = city_country('san diego', 'america')
+print(my_city)
+
+# write a function called make_album() that builds a dictionary describing a music album
+# the function should take in an artist name and an album title, and it should return a dictionary containing these 2 pieces of info
+# use the fucntion to make 3 dictionaries representing different albums
+# print each return value to show that the diciutonaries are storing the album info correctly
+# use None to add an optinal parameter to make_album() that allows you to store the number of songs on an album
+# if the calling line includes a value for the number of songs, add that vlaue to the albmumns dicitonary
+# make at leat one new fucntuion call taht includes the number of songs on an album
+
+def make_album(artist, name, songs=None):
+    album = {
+        'artist name' : artist.title(),
+        'album name' : name.title()
+    }
+    if songs:
+        album['number of songs'] = songs
+    return album
+
+album_0 = make_album('milena amaral', 'impossivel')
+album_1 = make_album('iron maiden','fear of the dark')
+album_2 = make_album('caio guerra', 'espelho', 1)
+
+print(album_0)
+print(album_1)
+print(album_2)
