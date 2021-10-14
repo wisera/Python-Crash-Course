@@ -284,3 +284,22 @@ class Privileges:
 admin_1 = Admin('admin_1','admin_1',0,'administrate')
 
 admin_1.privileges.show_privileges()
+
+# make a dice w/ one attribute called sides, which has a default value of 6
+# write a method called roll_dice() that prints a random number between 1 and 6.
+# make a six sided die and roll it twice
+from random import randint
+class Dice:
+    
+    def __init__(self):
+        self.sides = 6
+
+    def roll_dice(self):
+        number_rolled = randint(1,6)
+        print(f'you rolled {number_rolled}')
+
+dice = Dice()
+
+dice.roll_dice()
+dice.roll_dice()
+
