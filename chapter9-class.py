@@ -154,3 +154,85 @@ print(my_user.login_attempts)
 my_user.reset_login_attempts()
 print(my_user.login_attempts)
 
+# an ice cream stand is a specific kind of restaurant. 
+# Write a class called IceCreamStand that inherits from the Restaurant class you wrote from last exercise.
+# add an attribute called flavors that stores a list of ice cream falvors.
+# write a method that displats these flavors.
+# create an instance of IceCreamStand, and call this method
+
+class Restaurant:
+    
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+    
+    def describe_restaurant(self):
+        print(f"The restaurant {self.restaurant_name.title()} serves {self.cuisine_type.title()} food")
+
+    def open_restaurant(self):
+        print(f"{self.restaurant_name.title()} is open for business")
+
+    def set_number_served(self, number_served):
+        self.number_served = number_served
+
+    def increment_number_served(self, increment_number_served):
+        self.number_served += increment_number_served
+    
+class IceCreamStand(Restaurant):
+    
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['vanilla','cholate','caramel']
+    
+    def display_flavors(self):
+        print('We have the following flavors: ')
+        for flavor in self.flavors:
+            print(flavor)
+
+quasar = IceCreamStand('quasar','ice cream')
+
+quasar.display_flavors()
+
+# an administrator is a special kind of user.
+# write a class called Admin that inherits from the User class you wrote in the last exercise
+# add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user"
+# write a method called show_privileges() that lists the administrator's set of privileges
+# create an instance of Admin, and call your method
+
+class User:
+
+    def __init__(self, first_name, last_name, age, hobby):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.hobby = hobby
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"The user's name is {self.first_name.title()} {self.last_name.title()}, "
+            f"he is {self.age} years old and he likes to {self.hobby}")
+    
+    def greet_user(self):
+        print(f"Hello {self.first_name.title()} {self.last_name.title()}, welcome back!")
+    
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+    
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+class Admin(User):
+    
+    def __init__(self, first_name, last_name, age, hobby ):
+        super().__init__(first_name,last_name,age,hobby)
+        self.privileges = ['can add post','can delete post','can ban user']
+    
+    def show_privileges(self):
+        print('These are the set of privileges the admin account has: ')
+        for privilege in self.privileges:
+            print(privilege)
+    
+admin_0 = Admin('admin','admin','100','administrate')
+
+admin_0.show_privileges()
