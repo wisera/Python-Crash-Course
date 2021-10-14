@@ -1,0 +1,9 @@
+In Python you can use variables.
+In Python you can use lists.
+In Python you can use for loops.
+In Python you can use if statements.
+In Python you can use dicitonaries.
+In Python you can use while loops.
+In Python you can use user input.
+In Python you can use functions.
+In Python you can use classes.
