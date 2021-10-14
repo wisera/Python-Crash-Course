@@ -236,3 +236,51 @@ class Admin(User):
 admin_0 = Admin('admin','admin','100','administrate')
 
 admin_0.show_privileges()
+
+# write a separate Privileges class.
+# the class should hae one attribute, privileges, that stores a list of sstrings as described in last exercise
+# move the show_privileges() method to this class.
+# make a Privileges instance as an attribute in the Admin class.
+# create a new instance of Admin and use your method to show its privileges
+
+class User:
+
+    def __init__(self, first_name, last_name, age, hobby):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.hobby = hobby
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"The user's name is {self.first_name.title()} {self.last_name.title()}, "
+            f"he is {self.age} years old and he likes to {self.hobby}")
+    
+    def greet_user(self):
+        print(f"Hello {self.first_name.title()} {self.last_name.title()}, welcome back!")
+    
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+    
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+class Admin(User):
+    
+    def __init__(self, first_name, last_name, age, hobby ):
+        super().__init__(first_name,last_name,age,hobby)
+        self.privileges = Privileges()
+
+class Privileges:
+    
+    def __init__(self):
+        self.privileges = ['can add post','can delete post','can ban user']
+    
+    def show_privileges(self):
+        print('These are the set of privileges the admin account has: ')
+        for privilege in self.privileges:
+            print(privilege)
+
+admin_1 = Admin('admin_1','admin_1',0,'administrate')
+
+admin_1.privileges.show_privileges()
