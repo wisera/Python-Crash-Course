@@ -59,3 +59,28 @@ with open('guest_book.txt') as file_object:
     contents = file_object.read()
     print(contents)
 
+# one common problem when prompting for numerical inpout occurs when people provide text instead of numbers
+# when you try to convert the inoput to an int, you'll get a ValueError
+# write a program that prompts for two numbers.
+# add them together and print the result
+# catch the ValueError if either input value is not a number, and print a firendly error message.
+# test your program by entering two numbers and then entering some text instead of a number
+
+while True:
+    print('Enter 2 numbers and I will add them')
+    print("press 'q' to quit")
+    
+    first_number = input('enter your first number: ')
+    if first_number == 'q':
+        break
+    second_number = input('enter your second number: ')
+    if second_number == 'q':
+        break
+
+    try:
+        result = int(first_number) + int(second_number)
+    except ValueError:
+        print('please enter a number!')
+    else:
+        print(f'Your result is {result}')
+
